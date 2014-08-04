@@ -26,7 +26,22 @@
     <ul class="todos">
       <% todos.each do |todo| %>
           <li><%= todo.body %></li>
+        <br>
+        <a href="/todos/<%= todo["id"] %>/edit">Edit</a>
+
+        <form method="post" action="/todos/<%= todo["id"] %>">
+          <input type="hidden" name="_method" value="delete"/>
+          <input type="submit" value="Complete"/>
+
+        </form>
+
+
+
+
+        <br>
       <% end %>
+
+
     </ul>
   </div>
 </div>

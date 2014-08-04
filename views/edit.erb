@@ -1,0 +1,7 @@
+<h3>Edit Todo</h3>
+
+<form method="post" action="/todos/<%= body["id"] %>">
+  <input type="hidden" name="_method" value="patch" />
+  <textarea name="body"><%= body["body"] %></textarea>
+  <button>Update Todo</button>
+</form>
